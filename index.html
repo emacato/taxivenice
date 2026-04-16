@@ -173,6 +173,59 @@
     .hero-content { padding-top: 170px !important; padding-bottom: 60px !important; }
     .bg-canal { background-attachment: scroll; }
   }
+
+  /* CTA buttons — fix hover text visibility */
+  .btn-gold {
+    display: inline-block;
+    border: 1px solid #C9A84C;
+    color: #C9A84C;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-gold:hover { background: #C9A84C; color: #1a1f2e !important; }
+
+  .btn-gold-filled {
+    display: inline-block;
+    background: #C9A84C;
+    color: #1a1f2e !important;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-gold-filled:hover { background: #E8D08A; color: #1a1f2e !important; }
+
+  .btn-navy {
+    display: inline-block;
+    border: 1px solid #1a1f2e;
+    color: #1a1f2e !important;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-navy:hover { background: #1a1f2e; color: #FAF7F0 !important; }
+
+  .btn-dark {
+    display: inline-block;
+    background: #1a1f2e;
+    color: #FAF7F0 !important;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-dark:hover { opacity: 0.85; }
 </style>
 </head>
 <body class="it">
@@ -216,7 +269,7 @@
         <span style="color:#C9A84C; opacity:0.4;">|</span>
         <button onclick="setLang('en')" class="lang-btn" id="btn-en">EN</button>
       </div>
-      <a href="#prenota" class="hidden md:inline-block border border-gold text-gold hover:bg-gold hover:text-navy transition-all" style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; font-family:'Jost',sans-serif; padding:8px 20px; color:#C9A84C;">
+      <a href="#prenota" class="hidden md:inline-block btn-gold" style="padding:8px 20px;">
         <span data-it>Prenota</span><span data-en>Book</span>
       </a>
       <button id="mob-btn" class="md:hidden text-white" onclick="document.getElementById('mob-nav').classList.toggle('hidden')">
@@ -229,7 +282,7 @@
     <a href="#chi-siamo" onclick="document.getElementById('mob-nav').classList.add('hidden')" class="text-white hover:text-gold" style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-family:'Jost',sans-serif;"><span data-it>Chi Siamo</span><span data-en>About</span></a>
     <a href="#dove-trovarci" onclick="document.getElementById('mob-nav').classList.add('hidden')" class="text-white hover:text-gold" style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-family:'Jost',sans-serif;"><span data-it>Dove Trovarci</span><span data-en>Where</span></a>
     <a href="#recensioni" onclick="document.getElementById('mob-nav').classList.add('hidden')" class="text-white hover:text-gold" style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-family:'Jost',sans-serif;"><span data-it>Recensioni</span><span data-en>Reviews</span></a>
-    <a href="#prenota" onclick="document.getElementById('mob-nav').classList.add('hidden')" style="color:#C9A84C; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-family:'Jost',sans-serif;"><span data-it>Prenota ora →</span><span data-en>Book now →</span></a>
+    <a href="#prenota" onclick="document.getElementById('mob-nav').classList.add('hidden')" style="color:#C9A84C; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-family:'Jost',sans-serif; text-decoration:none;"><span data-it>Prenota ora →</span><span data-en>Book now →</span></a>
   </div>
 </header>
 
@@ -256,10 +309,10 @@
       <span data-en>No anonymous rides. Only carefully handled, punctual and unforgettable journeys<br>through the canals and lagoon of Venice — available 24/7, every day.</span>
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#prenota" class="bg-gold text-navy font-sans font-medium hover:bg-gold-light transition-colors" style="font-size:11px; letter-spacing:0.22em; text-transform:uppercase; padding:16px 40px; background:#C9A84C; color:#1a1f2e;">
+      <a href="#prenota" class="btn-gold-filled font-medium" style="padding:16px 40px;">
         <span data-it>Prenota il Transfer</span><span data-en>Book Your Transfer</span>
       </a>
-      <a href="#servizi" class="border text-white font-sans font-light hover:border-gold hover:text-gold transition-colors" style="border-color:rgba(255,255,255,0.75); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; padding:16px 40px; text-shadow:0 1px 4px rgba(0,0,0,0.5);">
+      <a href="#servizi" class="btn-gold" style="padding:16px 40px; border-color:rgba(255,255,255,0.75); color:white;">
         <span data-it>Scopri i Servizi</span><span data-en>Discover Services</span>
       </a>
     </div>
@@ -313,7 +366,7 @@
         <span data-it>Siamo taxi acqueo venezia con esperienza pluriennale nella laguna veneta. Le nostre imbarcazioni — oggetto di un accurato restyling artigianale — sono aderenti all'iniziativa <strong style="color:#C9A84C;">Canal Grande Plastic Free</strong> per la tutela dell'ambiente lagunare.</span>
         <span data-en>We are an experienced water taxi venice service operating throughout the Venetian lagoon. Our artisanally restored boats support the <strong style="color:#C9A84C;">Canal Grande Plastic Free</strong> initiative for environmental protection.</span>
       </p>
-      <a href="#prenota" class="inline-block border border-gold text-gold font-sans hover:bg-gold hover:text-navy transition-all" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; padding:12px 32px; color:#C9A84C;">
+      <a href="#prenota" class="btn-gold" style="padding:12px 32px;">
         <span data-it>Contattaci ora</span><span data-en>Contact us</span>
       </a>
     </div>
@@ -419,7 +472,7 @@
     <span data-en>Wherever the lagoon takes you,<br>we will be there waiting.</span>
   </h2>
   <p class="font-serif text-gold italic font-light mb-8" style="font-size:1.7rem; color:#C9A84C;">+39 349 68 88 876</p>
-  <a href="tel:+393496888876" class="inline-block border border-gold text-gold font-sans hover:bg-gold hover:text-navy transition-all" style="font-size:11px; letter-spacing:0.25em; text-transform:uppercase; padding:14px 40px; color:#C9A84C;">
+  <a href="tel:+393496888876" class="btn-gold" style="padding:14px 40px;">
     <span data-it>Chiama Ora</span><span data-en>Call Now</span>
   </a>
 </div>
@@ -605,10 +658,10 @@
     <span data-en>Contact us directly for availability and information.</span>
   </p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="tel:+393496888876" class="font-sans font-medium hover:opacity-90 transition-opacity" style="background:#1a1f2e;color:white;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:16px 36px;">
+    <a href="tel:+393496888876" class="btn-dark font-medium" style="padding:16px 36px;">
       <span data-it>📞 +39 349 68 88 876</span><span data-en>📞 +39 349 68 88 876</span>
     </a>
-    <a href="#prenota" class="font-sans font-light border border-navy hover:bg-navy hover:text-white transition-all" style="color:#1a1f2e;border-color:#1a1f2e;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:16px 36px;">
+    <a href="#prenota" class="btn-navy" style="padding:16px 36px;">
       <span data-it>✉ Scrivi un messaggio</span><span data-en>✉ Send a message</span>
     </a>
   </div>
@@ -655,7 +708,7 @@
         <textarea name="messaggio" rows="4" class="form-input resize-none" placeholder="Transfer aeroporto, tour laguna, data, orario..."></textarea>
       </div>
       <input type="hidden" name="_language" id="form-lang" value="it">
-      <button type="submit" class="w-full font-sans font-medium hover:opacity-90 transition-opacity" style="background:#C9A84C;color:#1a1f2e;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;padding:18px;">
+      <button type="submit" class="w-full btn-gold-filled font-medium" style="padding:18px;">
         <span data-it>Invia Richiesta</span><span data-en>Send Request</span>
       </button>
     </form>
